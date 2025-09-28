@@ -1,0 +1,133 @@
+Questions for TacoCat Game Development
+
+Date: 
+Developer: 
+
+GAME DESIGN QUESTIONS:
+- What additional features would you like to add to TacoCat?
+- What types of quests should players complete?
+- Should there be different areas/maps to explore?
+- What items or power-ups would enhance gameplay?
+- How should the progression system work?
+
+TECHNICAL QUESTIONS:
+- Are you satisfied with the current HTML5/JavaScript approach?
+- Do you need help setting up version control (Git)?
+- Would you like to add sound effects or music?
+- Should we implement a save/load system?
+- Any performance concerns or optimizations needed?
+
+CONTENT QUESTIONS:
+- What art style appeals to you for sprites and backgrounds?
+- Do you want to add dialogue or story elements?
+- What should be the main antagonist or challenge?
+- Should there be multiple endings or paths?
+- How long should a typical play session be?
+
+MONETIZATION QUESTIONS:
+- Are you planning to sell the game or keep it free?
+- Would you consider "pay what you want" pricing?
+- Do you want to add any premium features?
+- Should there be in-game purchases or donations?
+
+LAUNCH QUESTIONS:
+- What platforms do you want to target?
+- Do you need help with marketing or promotion?
+- Should we create a demo version first?
+- What's your target launch timeline?
+
+UNREAL ENGINE SECTION:
+
+Q: Is Unreal Engine Free?
+A: [RESEARCH NEEDED] 
+Notes: Need to investigate pricing model, licensing terms, and revenue sharing requirements.
+
+CUSTOM ART & ANIMATION SECTION:
+
+Q: Can I use my own drawn cat picture as TacoCat's avatar?
+A: Yes! We can replace the simple colored rectangles with your custom artwork.
+Notes: Need to scan/digitize hand-drawn image, convert to PNG format, and implement in game code.
+
+Q: Can we animate the custom avatar?
+A: Yes! We can add animations like blinking, tail wagging, happiness expressions, etc.
+Notes: Can create frame-based animations or procedural animations using your artwork.
+
+START MENU & SAVE SYSTEM SECTION:
+
+Q: What features are needed for a Start Menu system?
+A: Complete workflow requires these components:
+Notes: 
+- Start Menu screen with options: New Game, Continue, Quit
+- Save Game functionality (store player progress)
+- Load Game functionality (restore saved progress)
+- Exit Game functionality
+- State management (menu vs gameplay states)
+
+Q: What data needs to be saved?
+A: [TO BE DETERMINED] Current game state includes:
+Notes: Player stats (coins, health, food), TacoCat happiness level, player position, game progress
+
+Q: Where should save data be stored?
+A: [TO BE DETERMINED] Options include:
+Notes: Browser localStorage (free, simple), server database (complex), file export/import
+
+DYNAMIC MAP EXPANSION SECTION:
+
+Q: Can we make the map dynamically expandable?
+A: Yes! We can implement a dynamic world system with multiple approaches.
+Notes: 
+- TILE-BASED SYSTEM: Divide world into tiles/chunks that load as player moves
+- SCROLLING WORLD: Large canvas that scrolls as player moves (like classic RPGs)
+- ROOM-BASED SYSTEM: Different areas/rooms connected by transitions
+- INFINITE WORLD: Generate new areas procedurally as player explores
+
+Q: What are the technical considerations for dynamic maps?
+A: [TO BE DETERMINED] Key factors include:
+Notes: 
+- Performance (rendering large areas vs loading chunks)
+- Save system (how to save expanded world state)
+- Player boundaries (how to handle edge cases)
+- Asset management (loading new tiles/areas)
+- Memory usage (keeping track of explored areas)
+
+Q: What type of expansion would work best for TacoCat?
+A: [TO BE DETERMINED] Options include:
+Notes:
+- Simple room system (Forest, Cave, Village areas)
+- Scrolling world (like classic Zelda games)
+- Tile-based exploration (like Minecraft chunks)
+- Procedural generation (like infinite worlds)
+
+STANDALONE APPLICATION SECTION:
+
+Q: Is it possible to make the game initialize in its own window, not in a web browser?
+A: Yes! Multiple options available for converting HTML5 games to standalone applications.
+Notes:
+- ELECTRON: Most popular, turns HTML5 games into desktop apps (used by Discord, VS Code)
+- Tauri: Rust-based alternative to Electron (smaller, faster)
+- PWA (Progressive Web App): Can install from browser, runs like native app
+- NW.js: Another option similar to Electron
+- Native packaging tools for distribution
+
+Q: What are the pros and cons of each standalone option?
+A: [TO BE DETERMINED] Key considerations:
+Notes:
+- ELECTRON: Large file size, but very reliable and widely used
+- Tauri: Much smaller, but requires Rust knowledge
+- PWA: Easy to implement, works on mobile too, but limited desktop features
+- Performance differences, distribution options, development complexity
+
+Q: Which option would work best for TacoCat's budget constraints?
+A: [TO BE DETERMINED] Budget considerations:
+Notes:
+- PWA: Completely free, easiest to implement
+- Electron: Free but creates larger distribution files
+- All options maintain the HTML5/JavaScript codebase
+- No need to rewrite the game in different languages
+
+NOTES:
+Unreal Engine is free to download and use
+Revenue sharing: Epic takes 5% of gross revenue after your first $1 million USD per game
+No upfront costs or subscription fees
+Free for learning, prototyping, and commercial use
+Source code is available for free

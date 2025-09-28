@@ -1,0 +1,116 @@
+TacoCat - Game Features List
+============================
+
+CORE GAMEPLAY MECHANICS:
+========================
+
+✅ Player Character
+- Orange cat character controlled by player
+- Movement with WASD or Arrow Keys
+- Collision detection with coins and TacoCat
+- Three stats: Coins, Health (100), Food (100%)
+
+✅ Coin Collection System
+- Golden spinning coins scattered around the world
+- Player can collect coins by walking into them
+- Coins are consumed when collected
+
+✅ TacoCat NPC
+- Red cat with taco shells that serves as coin recipient
+- Player can give coins to TacoCat by pressing SPACE near them
+- Visual feedback when interacting
+
+✅ Happiness System
+- TacoCat has happiness levels based on coins received
+- Happiness Level 1: 10 coins required
+- Happiness Level 2: 15 coins required (total 25 coins)
+- Happiness Level 3: 20 coins required (total 45 coins)
+- Each subsequent level requires 5 more coins than the previous
+- No upper limit on happiness levels
+
+✅ Automatic Coin Spawning
+- New coins spawn automatically at random intervals (1-5 seconds)
+- Maximum of 15 coins can exist on the map at any time
+- Ensures continuous gameplay without running out of collectibles
+
+UI & DISPLAY FEATURES:
+=====================
+
+✅ Game UI
+- Coin counter showing player's current coins
+- Health display (currently static at 100)
+- Food stat display (starts at 100%)
+- Quest text display
+- Real-time updates when collecting/giving coins
+- Save button (💾 Save) for manual saves
+- Menu button (🏠 Menu) to return to start menu
+
+✅ TacoCat Status Display
+- Happiness level indicator (😊 Happiness X)
+- Total coins received counter (💰 X coins)
+- Progress to next level display
+- Visual feedback for player interaction
+
+WORLD & ENVIRONMENT:
+===================
+
+✅ Game World
+- Green grass background with grass pattern details
+- 800x600 pixel game area
+- Player movement boundaries (can't leave screen)
+
+✅ Visual Elements
+- Spinning coin animation
+- Cat character with ears and face details
+- TacoCat with taco shell decorations
+- Color-coded UI elements
+
+TECHNICAL FEATURES:
+==================
+
+✅ Game Engine
+- HTML5 Canvas-based game engine
+- 60 FPS game loop with delta time
+- Collision detection system
+- Event handling for keyboard input
+
+✅ Performance
+- Efficient coin spawning system
+- Frame-rate independent timing
+- Optimized rendering loop
+
+✅ Start Menu System
+- Beautiful start menu with game title and subtitle
+- New Game button (starts fresh game)
+- Continue Game button (loads saved progress)
+- Quit Game button (exits with confirmation)
+- Save status indicator showing if save exists
+
+✅ Save/Load System
+- Complete save/load functionality using browser localStorage
+- Saves player stats (coins, health, food, position)
+- Saves TacoCat happiness level and progress
+- Saves current coin positions
+- Automatic save detection and status display
+- Manual save button during gameplay
+
+🔄 Sound Effects & Music
+- Audio not yet implemented
+
+🔄 Multiple Areas/Maps
+- Currently single screen gameplay
+
+🔄 Items & Power-ups
+- Basic coin system only
+
+🔄 Combat or Challenges
+- No enemies or obstacles currently
+
+NOTES:
+======
+- Game is fully playable in web browsers
+- Built with HTML5/JavaScript for cross-platform compatibility
+- Free to develop and distribute
+- Ready for additional feature expansion
+
+Last Updated: [Current Session]

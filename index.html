@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TacoCat - Adventure RPG</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #2c3e50;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        #gameContainer {
+            border: 3px solid #34495e;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+        
+        #gameCanvas {
+            display: block;
+            background-color: #27ae60;
+        }
+        
+        #ui {
+            background-color: #34495e;
+            color: white;
+            padding: 10px;
+            border-top: 2px solid #2c3e50;
+        }
+        
+        .stat {
+            display: inline-block;
+            margin-right: 20px;
+            font-weight: bold;
+        }
+        
+        .coins {
+            color: #f1c40f;
+        }
+        
+        .health {
+            color: #e74c3c;
+        }
+        
+        .food {
+            color: #e67e22;
+        }
+        
+        .menu-screen {
+            width: 800px;
+            height: 600px;
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 3px solid #34495e;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+        
+        .menu-content {
+            text-align: center;
+            color: white;
+        }
+        
+        .game-title {
+            font-size: 48px;
+            margin: 0 0 10px 0;
+            color: #f39c12;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .game-subtitle {
+            font-size: 18px;
+            margin: 0 0 40px 0;
+            color: #ecf0f1;
+        }
+        
+        .menu-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .menu-btn {
+            padding: 15px 30px;
+            font-size: 18px;
+            background: linear-gradient(145deg, #3498db, #2980b9);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            min-width: 200px;
+        }
+        
+        .menu-btn:hover {
+            background: linear-gradient(145deg, #5dade2, #3498db);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+        }
+        
+        .menu-btn:active {
+            transform: translateY(0);
+        }
+        
+        .menu-btn:disabled {
+            background: #7f8c8d;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .save-status {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #95a5a6;
+        }
+        
+        .save-btn {
+            padding: 5px 10px;
+            font-size: 12px;
+            background: #27ae60;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        
+        .save-btn:hover {
+            background: #2ecc71;
+        }
+        
+        .save-container {
+            display: inline-block;
+            position: relative;
+        }
+        
+        .save-feedback {
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #27ae60;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: bold;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+            white-space: nowrap;
+            z-index: 1000;
+        }
+        
+        .save-feedback.show {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div id="gameContainer">
+        <!-- Start Menu -->
+        <div id="startMenu" class="menu-screen">
+            <div class="menu-content">
+                <h1 class="game-title">🐱 TacoCat Adventure 🐱</h1>
+                <p class="game-subtitle">Help TacoCat by collecting coins!</p>
+                
+                <div class="menu-buttons">
+                    <button id="newGameBtn" class="menu-btn">🎮 New Game</button>
+                    <button id="continueBtn" class="menu-btn">📁 Continue Game</button>
+                    <button id="quitBtn" class="menu-btn">❌ Quit Game</button>
+                </div>
+                
+                <div id="saveStatus" class="save-status"></div>
+            </div>
+        </div>
+        
+        <!-- Game Screen -->
+        <div id="gameScreen" class="game-screen" style="display: none;">
+            <canvas id="gameCanvas" width="800" height="600"></canvas>
+            <div id="ui">
+                <span class="stat coins">💰 Coins: <span id="coinCount">0</span></span>
+                <span class="stat health">❤️ Health: <span id="healthCount">100</span></span>
+                <span class="stat food">🍎 Food: <span id="foodCount">100</span></span>
+                <span class="stat">🎯 Quest: <span id="questText">Find coins for TacoCat!</span></span>
+                <div class="save-container">
+                    <button id="saveBtn" class="save-btn">💾 Save</button>
+                    <div id="saveFeedback" class="save-feedback"></div>
+                </div>
+                <button id="menuBtn" class="save-btn">🏠 Menu</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/game.js"></script>
+</body>
+</html>
