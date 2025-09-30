@@ -52,6 +52,26 @@
             color: #e67e22;
         }
         
+        .character {
+            color: #f39c12;
+            font-weight: bold;
+        }
+        
+        .character-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .level {
+            color: #e74c3c;
+            font-weight: bold;
+            background: rgba(231, 76, 60, 0.1);
+            padding: 2px 8px;
+            border-radius: 4px;
+            border: 1px solid rgba(231, 76, 60, 0.3);
+        }
+        
         .menu-screen {
             width: 800px;
             height: 600px;
@@ -165,6 +185,175 @@
         .save-feedback.show {
             opacity: 1;
         }
+        
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+        }
+        
+        .modal-content {
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            max-width: 400px;
+            width: 90%;
+        }
+        
+        .modal-content h2 {
+            margin: 0 0 15px 0;
+            color: #f39c12;
+            font-size: 28px;
+        }
+        
+        .modal-content p {
+            margin: 0 0 20px 0;
+            color: #ecf0f1;
+            font-size: 16px;
+        }
+        
+        .name-input {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: 2px solid #3498db;
+            border-radius: 8px;
+            background: #ecf0f1;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+        
+        .name-input:focus {
+            outline: none;
+            border-color: #f39c12;
+            box-shadow: 0 0 10px rgba(243, 156, 18, 0.3);
+        }
+        
+        .modal-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+        
+        .modal-btn {
+            padding: 12px 24px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+        
+        .modal-btn.confirm {
+            background: linear-gradient(145deg, #27ae60, #2ecc71);
+            color: white;
+        }
+        
+        .modal-btn.confirm:hover {
+            background: linear-gradient(145deg, #2ecc71, #27ae60);
+            transform: translateY(-2px);
+        }
+        
+        .modal-btn.cancel {
+            background: linear-gradient(145deg, #e74c3c, #c0392b);
+            color: white;
+        }
+        
+        .modal-btn.cancel:hover {
+            background: linear-gradient(145deg, #c0392b, #e74c3c);
+            transform: translateY(-2px);
+        }
+        
+        .credits-content {
+            max-width: 500px;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        
+        .credits-text {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        
+        .credits-text h3 {
+            color: #f39c12;
+            margin: 15px 0 5px 0;
+            font-size: 16px;
+        }
+        
+        .credits-text p {
+            margin: 5px 0;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+        
+        .credits-text em {
+            color: #95a5a6;
+        }
+        
+        .ui-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+        
+        .experience-container {
+            display: flex;
+            align-items: center;
+            flex: 1;
+            margin-right: 20px;
+        }
+        
+        .exp-label {
+            color: #f1c40f;
+            font-weight: bold;
+            margin-right: 10px;
+            min-width: 50px;
+        }
+        
+        .exp-bar {
+            position: relative;
+            background-color: #2c3e50;
+            border: 2px solid #34495e;
+            border-radius: 10px;
+            height: 20px;
+            flex: 1;
+            overflow: hidden;
+        }
+        
+        .exp-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #3498db, #2980b9);
+            border-radius: 8px;
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+        
+        .exp-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 11px;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+            z-index: 10;
+        }
     </style>
 </head>
 <body>
@@ -178,6 +367,7 @@
                 <div class="menu-buttons">
                     <button id="newGameBtn" class="menu-btn">🎮 New Game</button>
                     <button id="continueBtn" class="menu-btn">📁 Continue Game</button>
+                    <button id="creditsBtn" class="menu-btn">📜 Credits</button>
                     <button id="quitBtn" class="menu-btn">❌ Quit Game</button>
                 </div>
                 
@@ -185,23 +375,90 @@
             </div>
         </div>
         
+        <!-- Character Naming Modal -->
+        <div id="characterModal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <h2>🐱 Name Your Cat 🐱</h2>
+                <p>What would you like to call your adventurous cat?</p>
+                <input type="text" id="characterNameInput" class="name-input" placeholder="Enter cat name..." maxlength="15">
+                <div class="modal-buttons">
+                    <button id="confirmNameBtn" class="modal-btn confirm">Start Adventure!</button>
+                    <button id="cancelNameBtn" class="modal-btn cancel">Back to Menu</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Credits Modal -->
+        <div id="creditsModal" class="modal" style="display: none;">
+            <div class="modal-content credits-content">
+                <h2>📜 Credits & Attributions</h2>
+                <div class="credits-text">
+                    <h3>🎮 Game Development</h3>
+                    <p>Game Design & Programming: [Your Name]<br>
+                    Built with HTML5 Canvas + JavaScript</p>
+                    
+                    <h3>🎵 Audio Credits</h3>
+                    <p>"Ambient Piano Music 1" by benpm - CC0 License<br>
+                    "Coins Single 04" by Little Robot Sound Factory - CC0 License<br>
+                    "Level Up Cheer" by SkyRaeVoicing - CC0 License<br>
+                    Source: Freesound.org<br>
+                    <em>Additional audio credits will be added as files are included</em></p>
+                    
+                    <h3>🎨 Art & Graphics</h3>
+                    <p>All current artwork: Procedurally generated<br>
+                    UI elements: Custom CSS styling</p>
+                    
+                    <h3>⚖️ Legal</h3>
+                    <p>Built using free, open-source technologies<br>
+                    All resources properly attributed<br>
+                    No proprietary licenses required</p>
+                    
+                    <p><strong>Thank you to all creators of free resources!</strong></p>
+                </div>
+                <div class="modal-buttons">
+                    <button id="closeCreditsBtn" class="modal-btn confirm">Close</button>
+                </div>
+            </div>
+        </div>
+        
         <!-- Game Screen -->
         <div id="gameScreen" class="game-screen" style="display: none;">
             <canvas id="gameCanvas" width="800" height="600"></canvas>
             <div id="ui">
-                <span class="stat coins">💰 Coins: <span id="coinCount">0</span></span>
-                <span class="stat health">❤️ Health: <span id="healthCount">100</span></span>
-                <span class="stat food">🍎 Food: <span id="foodCount">100</span></span>
-                <span class="stat">🎯 Quest: <span id="questText">Find coins for TacoCat!</span></span>
+                <div class="ui-row">
+                    <div class="character-info">
+                        <span class="stat character">🐱 <span id="characterName">Cat</span></span>
+                        <span class="stat level">⭐ Level <span id="playerLevel">1</span></span>
+                    </div>
+                    <span class="stat">🎯 Quest: <span id="questText">Find coins for TacoCat!</span></span>
+                </div>
+                
+                <div class="ui-row">
+                    <div class="experience-container">
+                        <span class="stat exp-label">⭐ EXP:</span>
+                        <div class="exp-bar">
+                            <div id="expBarFill" class="exp-bar-fill"></div>
+                            <span id="expText" class="exp-text">0 / 100</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ui-row">
+                    <span class="stat coins">💰 Coins: <span id="coinCount">0</span></span>
+                    <span class="stat health">❤️ Health: <span id="healthCount">100</span></span>
+                    <span class="stat food">🍎 Food: <span id="foodCount">100</span></span>
+                </div>
                 <div class="save-container">
                     <button id="saveBtn" class="save-btn">💾 Save</button>
                     <div id="saveFeedback" class="save-feedback"></div>
                 </div>
                 <button id="menuBtn" class="save-btn">🏠 Menu</button>
+                <button id="audioToggle" class="save-btn">🔊 Sound</button>
             </div>
         </div>
     </div>
     
+    <script src="js/audioManager.js"></script>
     <script src="js/game.js"></script>
 </body>
 </html>

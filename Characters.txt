@@ -1,0 +1,87 @@
+TacoCat - Characters Database
+============================
+
+PLAYER CHARACTERS:
+==================
+
+[Player Cat - Customizable]
+- Name: [Player-defined during character creation]
+- Species: Orange Cat
+- Role: Main protagonist
+- Stats: Coins (0), Health (100), Food (100%)
+- Special Abilities: Coin collection, TacoCat interaction
+- Starting Location: Starting Meadow
+- Appearance: Orange cat with ears, simple pixel art style
+
+NPC CHARACTERS:
+===============
+
+[TacoCat]
+- Name: TacoCat
+- Species: Red Cat with Taco Shells
+- Role: Coin collector, happiness progression system
+- Location: Starting Meadow (top-left area)
+- Special Features: 
+  * Happiness level system (Level 0+)
+  * Coin counter display
+  * Progress indicator for next happiness level
+- Appearance: Red cat body with taco shell decorations
+- Personality: Loves receiving coins, gets happier with more coins
+- Happiness Progression:
+  * Level 1: 10 coins required
+  * Level 2: 15 coins required (total 25)
+  * Level 3: 20 coins required (total 45)
+  * Each level requires 5 more coins than the previous
+
+POTENTIAL FUTURE CHARACTERS:
+============================
+
+[Forest Guardian]
+- Concept: Cat that guards the entrance to the Dark Forest
+- Role: Gatekeeper, quest giver
+- Requirements: Could require certain happiness level with TacoCat
+
+[Village Elder]
+- Concept: Wise old cat in TacoCat's Village
+- Role: Story progression, advanced quests
+- Location: TacoCat's Village (future room)
+
+[Cave Explorer]
+- Concept: Adventurous cat in Crystal Caves
+- Role: Guide for cave exploration, special coin locations
+- Location: Crystal Caves (future room)
+
+[Beach Vendor]
+- Concept: Merchant cat at Beach Paradise
+- Role: Item trading, special purchases
+- Location: Beach Paradise (future room)
+
+CHARACTER DEVELOPMENT NOTES:
+============================
+
+Current Character System:
+- Player character is fully customizable (name only currently)
+- TacoCat has personality and progression system
+- All characters use simple pixel art style for consistency
+
+Future Expansion Ideas:
+- Multiple player character options (different cat breeds)
+- More NPCs with unique personalities and quests
+- Character dialogue system
+- Character relationship system
+- Character-specific abilities or stats
+
+Technical Implementation:
+- Character names saved in localStorage
+- Character stats tracked in game state
+- Character positions saved for continuity
+- Character interactions through collision detection
+
+NOTES:
+======
+- All characters currently use HTML5 Canvas drawing
+- Character art is procedural (drawn with code)
+- Future custom artwork can replace procedural art
+- Character system designed for easy expansion
+
+Last Updated: [Current Session]

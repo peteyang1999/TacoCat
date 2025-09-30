@@ -1,0 +1,151 @@
+TacoCat Adventure - Credits & Attributions
+==========================================
+
+GAME DEVELOPMENT:
+=================
+- Game Design & Programming: [Your Name]
+- HTML5/JavaScript Implementation: Custom-built
+- Game Engine: HTML5 Canvas + JavaScript
+- Audio System: HTML5 Audio API
+
+FREE RESOURCES USED:
+====================
+
+AUDIO CREDITS:
+==============
+
+Current Audio Files:
+- "Ambient Piano Music 1" by benpm - CC0 License (Public Domain)
+- Source: Freesound.org - https://freesound.org/people/benpm/sounds/320506/
+- File: 320506__benpm__ambient-piano-music-1.wav
+- Usage: Background ambient music during gameplay
+
+- "Coins Single 04" by Little Robot Sound Factory - CC0 License (Public Domain)
+- Source: Freesound.org - https://freesound.org/people/LittleRobotSoundFactory/sounds/276143/
+- File: 276143__littlerobotsoundfactory__coins_single_04.wav
+- Usage: Coin collection sound effect
+
+- "Alright We Did It Female Cheer For Games" by SkyRaeVoicing - CC0 License (Public Domain)
+- Source: Freesound.org - https://freesound.org/people/SkyRaeVoicing/sounds/368841/
+- File: 368841__skyraevoicing__alright-we-did-it-female-cheer-for-games.wav
+- Usage: Level up celebration sound effect
+
+Additional Audio Credits (to be added):
+- "Button Click" by [Artist Name] - [License]
+- "TacoCat Happy Sound" by [Artist Name] - [License]
+- "Save Success Sound" by [Artist Name] - [License]
+
+AUDIO SOURCES TO CREDIT:
+========================
+
+When adding audio files, please update this section with:
+- Artist/Creator name
+- Sound file name
+- License type (CC BY, CC0, etc.)
+- Source website (Freesound.org, OpenGameArt.org, etc.)
+
+ART & GRAPHICS:
+===============
+
+Current Artwork:
+- All character sprites: Procedurally generated (HTML5 Canvas)
+- UI elements: Custom CSS styling
+- Game world: Code-generated graphics
+
+Future Art Credits:
+[To be added when custom artwork is included]
+
+Example format for future art credits:
+- "Cat Sprite Pack" by [Artist Name] - CC BY 4.0 License
+- "Background Tiles" by [Artist Name] - CC0 License
+
+FONTS:
+======
+
+- Primary Font: Arial (System font)
+- No additional font licenses required
+
+TECHNOLOGY STACK:
+=================
+
+- HTML5 Canvas: Browser-native technology
+- JavaScript ES6+: Modern web standards
+- CSS3: Browser-native styling
+- LocalStorage API: Browser-native data storage
+- HTML5 Audio API: Browser-native audio
+
+All technologies used are:
+- Free to use
+- No licensing required
+- Open web standards
+
+LEGAL COMPLIANCE:
+=================
+
+This game is built using:
+✅ Free, open-source technologies
+✅ Royalty-free resources (when audio is added)
+✅ Proper Creative Commons attribution (when applicable)
+✅ No proprietary software or licenses required
+
+ATTRIBUTION REQUIREMENTS:
+=========================
+
+When using Creative Commons resources:
+- Include creator name
+- Include license type (CC BY, CC0, etc.)
+- Include source URL
+- Maintain attribution in game credits
+- Follow license terms exactly
+
+COMMON LICENSE TYPES:
+=====================
+
+CC0 (Creative Commons Zero):
+- Public domain
+- No attribution required (but appreciated)
+- Can be used commercially
+
+CC BY (Creative Commons Attribution):
+- Must credit the creator
+- Can be used commercially
+- Can be modified
+
+CC BY-SA (Creative Commons Attribution-ShareAlike):
+- Must credit the creator
+- Must share derivative works under same license
+- Can be used commercially
+
+GAME INFORMATION:
+=================
+
+- Title: TacoCat Adventure
+- Genre: Adventure RPG
+- Platform: HTML5/Web Browser
+- Development: 2024
+- License: Free to play, educational use
+
+CONTACT:
+========
+
+For questions about this game or credits:
+- Developer: [Your Name]
+- Email: [Your Email]
+- Game Repository: [GitHub/Website URL]
+
+NOTES:
+======
+
+This credits file should be:
+- Updated whenever new resources are added
+- Kept accurate and complete
+- Accessible to players (can be linked in game menu)
+- Maintained throughout development
+
+Remember: Good attribution practices:
+- Always read and follow license terms
+- Keep detailed records of all resources used
+- Update credits when adding new content
+- Respect creator rights and wishes
+
+Last Updated: [Current Session]

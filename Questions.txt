@@ -125,6 +125,41 @@ Notes:
 - All options maintain the HTML5/JavaScript codebase
 - No need to rewrite the game in different languages
 
+AUDIO & SOUND SYSTEM SECTION:
+
+Q: Can we add sound files to give the game additional depth?
+A: Yes! HTML5 has excellent audio support and there are many free sound resources available.
+Notes:
+- HTML5 Audio API: Built-in browser support for .mp3, .wav, .ogg files
+- Web Audio API: Advanced audio processing and effects
+- Free sound libraries: Freesound.org, OpenGameArt.org, Zapsplat
+- Simple implementation: Just a few lines of JavaScript code
+
+Q: What types of sounds would enhance TacoCat?
+A: [TO BE DETERMINED] Sound categories to consider:
+Notes:
+- Sound Effects: Coin collection, footsteps, button clicks, TacoCat happiness sounds
+- Ambient Audio: Background music, environmental sounds (birds, wind)
+- UI Sounds: Menu interactions, save confirmation, level up sounds
+- Character Sounds: Cat meows, purrs, happy sounds for TacoCat
+
+Q: What are the technical considerations for game audio?
+A: [TO BE DETERMINED] Implementation factors:
+Notes:
+- File formats: MP3 (universal), OGG (better compression), WAV (uncompressed)
+- File sizes: Keep sounds small for web loading
+- Browser compatibility: Most modern browsers support HTML5 audio
+- Performance: Preload important sounds, use audio sprites for efficiency
+
+Q: Where can we find free game sounds?
+A: [TO BE DETERMINED] Free audio resources:
+Notes:
+- Freesound.org: Huge library of free sounds with CC licenses
+- OpenGameArt.org: Game-specific audio assets
+- Zapsplat: Free tier with registration
+- YouTube Audio Library: Free music and sound effects
+- Audacity: Free software for editing/creating sounds
+
 NOTES:
 Unreal Engine is free to download and use
 Revenue sharing: Epic takes 5% of gross revenue after your first $1 million USD per game
